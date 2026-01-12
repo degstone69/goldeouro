@@ -1971,7 +1971,7 @@
                     <span class="relative z-10 drop-shadow-sm">CHUTAR</span>
                     <span id="chances-text"
                         class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5a3a00]/70 mt-1 relative z-10">Chances:
-                        4</span>
+                        3</span>
                     <div class="absolute inset-0 shimmer-bar -translate-x-full opacity-0 group-hover:opacity-100"></div>
                 </button>
 
@@ -2040,7 +2040,7 @@
             style="background:#ffffff; border-radius:20px; padding:40px; max-width:500px; width:90%; text-align:center; box-shadow:0 10px 40px rgba(0,0,0,0.3); border:3px solid #FE2B54;">
             <h2
                 style="color:#FE2B54; font-size:32px; font-weight:bold; margin-bottom:20px; text-transform:uppercase; font-family:'Russo One',sans-serif; text-shadow:1px 1px 2px rgba(254,43,84,0.2); line-height:1.2;">
-                VOCÊ GANHOU 4 CHANCES DE FAZER O GOL PREMIADO
+                VOCÊ GANHOU 3 CHANCES DE FAZER O GOL PREMIADO
             </h2>
             <p
                 style="color:#333; font-size:18px; margin-bottom:30px; font-weight:500; font-family:'Roboto',sans-serif;">
@@ -2067,7 +2067,7 @@
             </p>
             <div id="quase-valor" class="text-3xl font-black text-[#fe2b54] mb-3 font-roboto tracking-tight">R$ 35,00
             </div>
-            <p id="quase-msg" class="text-gray-600 text-sm mb-6 leading-relaxed">Restam mais 3 chances para acertar o
+            <p id="quase-msg" class="text-gray-600 text-sm mb-6 leading-relaxed">Restam mais 2 chances para acertar o
                 gol de R$ 500!</p>
 
             <button id="btn-quase-continuar"
@@ -2657,11 +2657,11 @@
                 return;
             }
 
-            // MODO NORMAL (4 CHANCES)
+            // MODO NORMAL (3 CHANCES)
             if (chances <= 0) return;
             isProcessing = true;
 
-            if (chances === 4) {
+            if (chances === 3) {
                 // 1ª chance: sempre 35
                 const ganho = 35;
                 const box35 = boxes.find(b => b.textContent.trim() === '35');
@@ -2675,7 +2675,7 @@
                     abrirQuase(ganho, chances);
                     isProcessing = false;
                 });
-            } else if (chances === 3) {
+            } else if (chances === 2) {
                 // 2ª chance: sempre 19
                 const ganho = 19;
                 const box19 = boxes.find(b => b.textContent.trim() === '19');
@@ -2689,7 +2689,7 @@
                     abrirQuase(ganho, chances);
                     isProcessing = false;
                 });
-            } else if (chances === 2) {
+            } else if (chances === 1) {
                 // 3ª chance: sempre 1000
                 const ganho = 500;
                 const box1000 = boxes.find(b => b.textContent.trim() === '500');
@@ -2778,5 +2778,6 @@
 
 
 </html>
+
 
 
